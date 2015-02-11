@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://yukkurisinai.net/post.css" type="text/css" rel="stylesheet" />
+    <title>ゴミ箱 - 投稿</title>
+  </head>
+
+  <body>
+    <h2>投稿</h2>
+    <form action="/post" method="POST">
+      タイトル<br>
+      <input type="text" name="title" maxlength="30" style="width: 90%;" value="{{.Title}}">
+      <p> </p>
+      本文<br>
+      <textarea name="bodytext" maxlength="14000" rows="30">{{.Index_str}}</textarea>
+      <p> </p>
+      パスワード<br>
+      <input type="text" name="password" maxlength="30" style="width: 90%;">
+      <p> </p>
+      <div><input type="submit" value="投稿"></div>
+    </form>
+  </body>
+
+</html>

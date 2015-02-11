@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link href="http://yukkurisinai.net/main.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゴミ箱</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>ゴミ箱</h1>
+      <h2><a href="http://yukkurisinai.net">yukkuri_sinai</a>の掃き溜め</h2>
+      <form action="/">
+        <input type="text" name="search" maxlength="30" style="width: 80%;" value="{{.S}}">
+        <input type="submit" value="検索">
+      </form>{{range $_, $sakubun := .Sakubuns}}{{with $sakubun}}
+      <p><a href="/{{.Index}}">{{.Title}}</a>
+      <span class="gray">{{.Time}} UTC+0900</span></p>{{end}}{{end}}
+    </div>
+  </body>
+</html>
