@@ -12,7 +12,7 @@ const (
 )
 
 type Article struct {
-	Index   int
+	URL     string
 	Title   string
 	Content string
 }
