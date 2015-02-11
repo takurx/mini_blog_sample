@@ -9,6 +9,7 @@ import (
 
 const (
 	PORT = ":3000"
+	//http://localhost:3000/index.html
 )
 
 type Article struct {
